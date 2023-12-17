@@ -28,6 +28,7 @@ class Miscellaneous(Commands.Cog):
         if Debug == True:
             await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
+            
         else:
             try:
                 Messages = ["My friend <@1176985904481566824> says hello.", "Oh, hello there!", "How are you today?", "I love trees.", "Did you know, there are different species of Zebra?", "Chickens don't grow from trees.", "Donations are appreciated! Fun fact: They also can spike my motivation for future projects!", "Unfortunately, this bot is against the Terms of Service...", "If you see this.. HELLO!", "There's a 1 in 13 chance of seeing this!", "I wrote this message on December 13th, 2023 at 11:05 PM. ...Goodnight!", "Hey apple! ...If you understand that reference, consider yourself old.", "Is it just me... ooor do other people realize that a universal languages would be amazing?", "HELLLOOOOOO, from Suno!"]
@@ -48,6 +49,7 @@ class Miscellaneous(Commands.Cog):
         if Debug == True:
             await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
+            
         else:
             try:
                 Messages = ["Pong!", "Currently running @", "Potato salad is gross..", "Fried chicken!", "I love cows.", "FROGS ARE AMAZING!", "You proomesed my son free Robux!!!"]
@@ -68,11 +70,11 @@ class Miscellaneous(Commands.Cog):
         if Debug == True:
             await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
+            
         else:
             try:
-                Channel = await Interaction.guild.create_text_channel("channel-test")
-                await Channel.send("I have the permissions to create channels.",
-                                    ephemeral = False)
+                Channel = await Interaction.guild.create_text_channel(name = "channel-test")
+                await Channel.send("I have the permissions to create channels.")
                 
             except Exception as Exc:
                 print(Exc)
