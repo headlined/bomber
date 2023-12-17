@@ -60,6 +60,26 @@ class Miscellaneous(Commands.Cog):
                 await Interaction.response.send_message(":warning:  An error has occurred. \n<@1002377371892072498> has been notified of this bug & will report a bug fix that will be released globally shortly.",
                                                         ephemeral = True)
 
+    @AppCommands.command(name = "channel-test", description = "Test if the bot has the permissions to create channels.")
+    async def D(self, Interaction: Discord.Interaction):
+        Data = JSON.loads(open("Information.json", "r").read())
+        Debug = Data['Debug']
+
+        if Debug == True:
+            await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
+                                                    ephemeral = True)
+        else:
+            try:
+                Channel = await Interaction.guild.create_text_channel("channel-test")
+                await Channel.send("I have the permissions to create channels.",
+                                    ephemeral = False)
+                
+            except Exception as Exc:
+                print(Exc)
+
+                await Interaction.response.send_message(":warning:  An error has occurred. \n<@1002377371892072498> has been notified of this bug & will report a bug fix that will be released globally shortly.",
+                                                        ephemeral = True)
+
 
 # Sync our stuff:
 async def setup(Client):
