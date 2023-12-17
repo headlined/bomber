@@ -44,6 +44,7 @@ class Secure(Commands.Cog):
         if Debug == True:
             await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
+            
         else:
             try:
                 await Interaction.response.send_message("Saving server information to a JSON file...")
