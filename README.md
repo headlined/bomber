@@ -26,7 +26,7 @@ python Bomber.py
 
 ## License
 
-Bomber is licensed under the MIT License. For more information, see the [LICENSE](https://github.com/Suno0526/Bomber/LICENSE) file.
+Bomber is licensed under the MIT License. For more information, see the [LICENSE](https://github.com/Suno0526/Bomber/blob/main/LICENSE) file.
 
 ## Contributing
 
