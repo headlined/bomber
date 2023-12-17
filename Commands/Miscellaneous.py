@@ -8,11 +8,6 @@ from discord import app_commands as AppCommands;
 from discord.ext import commands as Commands;
 
 
-# Create our global variables
-Data = JSON.loads(open("Information.json", "r").read())
-Debug = Data['Debug']
-
-
 # Create our class:
 class Miscellaneous(Commands.Cog):
     def __init__(self, Client: Commands.Bot):
@@ -27,10 +22,11 @@ class Miscellaneous(Commands.Cog):
 
     @AppCommands.command(name = "test", description = "Respond with a random message to validate the bot's status.")
     async def B(self, Interaction: Discord.Interaction):
-        global Debug
+        Data = JSON.loads(open("Information.json", "r").read())
+        Debug = Data['Debug']
 
         if Debug == True:
-            await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode!** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
+            await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
         else:
             try:
@@ -46,10 +42,11 @@ class Miscellaneous(Commands.Cog):
 
     @AppCommands.command(name = "ping", description = "Respond with the bot's latency.")
     async def C(self, Interaction: Discord.Interaction):
-        global Debug
+        Data = JSON.loads(open("Information.json", "r").read())
+        Debug = Data['Debug']
 
         if Debug == True:
-            await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode!** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
+            await Interaction.response.send_message("# An Error Has Occurred. \n* If you want to use any commands, **please disable debug mode** by running **/debug** \n* __This is to prevent any issues with the bot.__ \n\nIf you are a developer, please note that debug mode is enabled & you will not be able to use any commands.** \n\n-Thanks, from <@1002377371892072498>.",
                                                     ephemeral = True)
         else:
             try:
