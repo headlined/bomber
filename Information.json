@@ -1,5 +1,5 @@
 {
     "Token": "PUT YOUR BOT TOKEN HERE",
-    "Debug": false
+    "Debug": false,
     "Explode": false
 }
