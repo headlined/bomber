@@ -152,7 +152,7 @@ class Cleaner(Commands.Cog):
             try:
                 for Channel in Interaction.guild.channels:
                     try:
-                        await Channel.purge()
+                        await Channel.purge(limit = None)
 
                         await Interaction.response.send_message("# Server Purged. \n* All messages have been deleted from the server.",
                                                                 ephemeral = True)
