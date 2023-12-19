@@ -147,8 +147,6 @@ class Cleaner(Commands.Cog):
                                                     ephemeral = True)
             
         else:
-            # Delay on purging channels may be long, even sometimes not work.
-            # Purge will be fixed tomorrow as a bug fix.
             try:
                 for Channel in Interaction.guild.channels:
                     try:
