@@ -1,3 +1,7 @@
+# Status
+
+This project is out of support. Although the repository will always be available! Feel free to make desired changes!
+
 # Bomber
 
 Bomber is a destructive Discord bot built for educational purposes. It's designed to simulate the behavior of a malicious bot to educate users about the potential risks and consequences of using such bots in their Discord servers.
